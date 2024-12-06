@@ -1,0 +1,43 @@
+.left-image {
+    animation: moveLeft 10s infinite alternate; /* Apply the animation named "moveLeft" to the element with the class "left-image". The animation will run for 10 seconds, repeat infinitely, and alternate direction each cycle. */
+}
+
+.right-image {
+    animation: moveRight 10s infinite alternate; /* Apply the animation named "moveRight" to the element with the class "right-image". The animation will run for 10 seconds, repeat infinitely, and alternate direction each cycle. */
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translate(-50%, -50%); /* At the start (0% keyframe), move the image to the top-left corner of its container. */
+    }
+    25% {
+        transform: translate(-25%, 0%); /* At 25% of the animation duration, move the image horizontally towards the center (left to right). */
+    }
+    50% {
+        transform: translate(0%, 25%); /* At 50% of the animation duration, move the image vertically towards the bottom. */
+    }
+    75% {
+        transform: translate(25%, 0%); /* At 75% of the animation duration, move the image horizontally towards the right. */
+    }
+    100% {
+        transform: translate(0%, -50%); /* At the end (100% keyframe), move the image back to the top but slightly to the right. */
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translate(50%, -50%); /* At the start (0% keyframe), move the image to the top-right corner of its container. */
+    }
+    25% {
+        transform: translate(25%, 0%); /* At 25% of the animation duration, move the image horizontally towards the center (right to left). */
+    }
+    50% {
+        transform: translate(0%, 25%); /* At 50% of the animation duration, move the image vertically towards the bottom. */
+    }
+    75% {
+        transform: translate(-25%, 0%); /* At 75% of the animation duration, move the image horizontally towards the left. */
+    }
+    100% {
+        transform: translate(0%, -50%); /* At the end (100% keyframe), move the image back to the top but slightly to the left. */
+    }
+}

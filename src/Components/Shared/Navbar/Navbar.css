@@ -1,0 +1,16 @@
+.drawer-top {
+    grid-auto-rows: auto max-content; /* Change grid-auto-columns to grid-auto-rows */
+}
+.drawer-top .drawer-toggle ~ .drawer-content {
+    grid-row-start: 1; /* Change grid-column-start to grid-row-start */
+}
+.drawer-top .drawer-toggle ~ .drawer-side {
+    grid-row-start: 2; /* Change grid-column-start to grid-row-start */
+    justify-items: end; /* If you want items aligned to the end */
+}
+.drawer-top .drawer-toggle ~ .drawer-side > *:not(.drawer-overlay) {
+    transform: translateY(-100%); /* Change translateX to translateY */
+}
+.drawer-top .drawer-toggle:checked ~ .drawer-side > *:not(.drawer-overlay) {
+    transform: translateY(0%); /* Change translateX to translateY */
+}
